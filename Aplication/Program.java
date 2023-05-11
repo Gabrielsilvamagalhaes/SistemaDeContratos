@@ -55,17 +55,16 @@ public class Program {
         }
         //Formula para pegar apenas o mes e o ano e transforma-lo em data
         System.out.print("Enter month and year to calculate to income (MM/YYYY): ");
-        String input = sc.next();
-        String[] parts = input.split("/");
-        String formattedDate = parts[1] + "-" + parts[0] + "-01";
-        LocalDate date = LocalDate.parse(formattedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String moth_Year = sc.next();
+        int month = Integer.parseInt(moth_Year.substring(0, 2));
+        int year = Integer.parseInt(moth_Year.substring(3));
 
         for(HourContract worker : user2){
             user1.addContract(worker);
         }
         System.out.println(user1);
         System.out.println(user);
-        System.out.println("Income for "+ input +": " +user1.income(date.getYear(), date.getMonthValue()));
+        System.out.println("Income for "+ moth_Year +": " +user1.income(year, month));
         sc.close();
     }
 
