@@ -64,7 +64,7 @@ public class Program {
         }
         System.out.println(user1);
         System.out.println(user);
-        System.out.println("Income for "+ moth_Year +": " +user1.income(year, month));
+        System.out.println("Income for "+ moth_Year +": " +String.format("%.2f", user1.income(year, month)));
         sc.close();
     }
 
