@@ -9,7 +9,7 @@ public class Worker {
     private String name;
     private WorkerLevel level;
     private Double baseSalary;
-    ArrayList<HourContract>x = new ArrayList<>();
+    private ArrayList<HourContract> x = new ArrayList<>();
     
     public Worker(){
 
@@ -88,6 +88,21 @@ public class Worker {
      */
     public void setBaseSalary(Double baseSalary) {
         this.baseSalary = baseSalary;
+    }
+
+
+    /**
+     * @return ArrayList<HourContract> return the x
+     */
+    public ArrayList<HourContract> getX() {
+        return x;
+    }
+
+    /**
+     * @param x the x to set
+     */
+    public void setX(ArrayList<HourContract> x) {
+        this.x = x;
     }
 
 }
